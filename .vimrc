@@ -76,7 +76,7 @@ nnoremap <Space>l $
 nnoremap k gk
 nnoremap j gj
 vnoremap k gk
-vnoremap j gi
+vnoremap j gj
 nnoremap gk k
 nnoremap gj j
 vnoremap gk k
