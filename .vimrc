@@ -36,6 +36,15 @@ filetype plugin indent off
  " this will conveniently prompt you to install them.
  NeoBundleCheck
 
+"autocmds
+augroup XML
+  autocmd!
+  autocmd FileType xml inoremap <silent> <buffer> </ </<C-x><C-o>
+  autocmd FileType html inoremap <silent> <buffer> </ </<C-x><C-o>
+  autocmd FileType eruby inoremap <silent> <buffer> </ </<C-x><C-o>
+  autocmd FileType erb inoremap <silent> <buffer> </ </<C-x><C-o>
+augroup END
+"basic settings
 syntax on
 set helplang=ja
 set number
@@ -61,18 +70,22 @@ set nrformats=
 
 colorscheme desert
 
+"exit commands
 nnoremap <Space>w :<C-u>w<CR>
 nnoremap <Space>q :<C-u>q<CR>
 nnoremap <Space>Q :<C-u>q!<CR>
 
+"map ; :
 nnoremap ; :
 nnoremap : ;
 vnoremap ; :
 vnoremap : ;
 
+"move to line of first and last
 nnoremap <Space>h ^
 nnoremap <Space>l $
 
+"movement
 nnoremap k gk
 nnoremap j gj
 vnoremap k gk
@@ -82,10 +95,34 @@ nnoremap gj j
 vnoremap gk k
 vnoremap gj j
 
+"search
 nnoremap <Space>/ *<C-o>
 nnoremap g<Space>/ g*<C-o>
 
+"window
+nnoremap s <Nop>
+nnoremap ss :<C-u>split<CR>
+nnoremap sv :<C-u>vsplit<CR>
+nnoremap sj <C-w>j
+nnoremap sh <c-w>h
+nnoremap sk <C-w>k
+nnoremap sl <C-w>l
+nnoremap sc <c-w>c
+nnoremap so <C-w>o
+nnoremap sw <c-w>w
+
+"tab
 nnoremap <silent> tt :<C-u>tabe<CR>
 nnoremap <C-p> gT
 nnoremap <C-n> gt
 inoremap jk <Esc>
+
+"Unite.vim
+nnoremap sb :Unite buffer<CR>
+
+"NERDTree
+let g:NERDTreeShowBookmarks=1
+autocmd vimenter * NERDTree
+
+"scripts
+source $VIMRUNTIME/macros/matchit.vim
