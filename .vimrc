@@ -30,6 +30,8 @@ filetype plugin indent off
  NeoBundle 'nginx.vim'
  NeoBundle 'digitaltoad/vim-pug'
  NeoBundle 'leafgarland/typescript-vim'
+ NeoBundle 'pathogen.vim'
+ NeoBundle 'kchmck/vim-coffee-script'
 
  " My Bundles here:
  " Refer to |:NeoBundle-examples|.
@@ -38,6 +40,7 @@ filetype plugin indent off
  call neobundle#end()
 
  " Required:
+ call pathogen#infect()
  filetype plugin indent on
 
  " If there are uninstalled bundles found on startup,
@@ -65,6 +68,8 @@ augroup end
 
 "basic settings
 syntax on
+set encoding=utf-8
+
 
 "日本語ヘルプを使う
 set helplang=ja
@@ -307,3 +312,4 @@ let Tlist_Use_Horiz_Window = 1
 
 " nginx
 au BufRead,BufNewFile /usr/local/etc/nginx* set ft=nginx
+
