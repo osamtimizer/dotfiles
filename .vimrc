@@ -32,6 +32,7 @@ filetype plugin indent off
  NeoBundle 'leafgarland/typescript-vim'
  NeoBundle 'pathogen.vim'
  NeoBundle 'kchmck/vim-coffee-script'
+ NeoBundle 'ctrlpvim/ctrlp.vim'
 
  " My Bundles here:
  " Refer to |:NeoBundle-examples|.
