@@ -47,7 +47,7 @@ bind -x '"\C-r": hl'
 # bash history
 export HISTCONTROL=ignoreboth
 export HISTIGNORE="fg*:bg*:history*:cd*"
-export HISTSIZE=20000
+export HISTSIZE=530000
 
 # pyenv
 export PYENV_ROOT="$HOME/.pyenv"
@@ -79,4 +79,4 @@ fi
 export PS1="\[\e[32;1m\]\u@\H \[\e[33;1m\]\w $PS1_GIT_BRANCH\n\[\e[36;1m\]\t \[\e[0m\]\$ "
 
 # secret settings
-sec_conf=$HOME/.bashrc.secret
+source $HOME/.bashrc.secret
