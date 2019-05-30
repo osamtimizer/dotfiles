@@ -36,6 +36,7 @@ alias gmbd='git branch --merged master | grep -vE "^\*|master$" | xargs -I % git
 alias hl='temp=$(cat ~/.bash_history | peco); { echo "$temp" | pbcopy ; }'
 alias dc='docker-compose'
 alias dcr='docker-compose run --rm'
+alias dcrabe='docker-compose run --rm app bundle exec'
 alias dcu='docker-compose up'
 alias dcd='docker-compose down'
 alias f-g='find ./ -type f -print | xargs grep '
