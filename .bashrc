@@ -39,7 +39,9 @@ alias dcr='docker-compose run --rm'
 alias dcrabe='docker-compose run --rm app bundle exec'
 alias dcu='docker-compose up'
 alias dcd='docker-compose down'
+alias be='bundle exec'
 alias f-g='find ./ -type f -print | xargs grep '
+alias src='source ~/.bash_profile'
 
 # binds
 bind -x '"\C-g": ghql'
@@ -81,3 +83,7 @@ export PS1="\[\e[32;1m\]\u@\H \[\e[33;1m\]\w $PS1_GIT_BRANCH\n\[\e[36;1m\]\t \[\
 
 # secret settings
 source $HOME/.bashrc.secret
+
+# openssl settings
+export LDFLAGS="-L/usr/local/opt/openssl/lib"
+export CPPFLAGS="-I/usr/local/opt/openssl/include"
