@@ -3,6 +3,8 @@ export LANG=en_US.UTF-8
 autoload -U compinit
 compinit
 
+source ~/.zshrc.secret
+
 # promptinitを使う場合はこちらを読み込む
 # 利用可能なpromptの設定を見る
 # $ prompt -l
