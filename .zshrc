@@ -86,8 +86,12 @@ fi
 zplug load
 
 # rbenv
-export PATH="$HOME/.rbenv/bin:$PATH" 
+export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init - zsh)"
+
+# flutter
+export PATH="$HOME/dev/flutter/bin:$PATH"
+
 
 # starship
 eval "$(starship init zsh)"
