@@ -65,6 +65,8 @@ alias f-g='find ./ -type f -print | xargs grep '
 zplug "b4b4r07/enhancd", use:init.sh
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
 zplug "zsh-users/zsh-completions"
+zplug "denysdovhan/spaceship-prompt", use:spaceship.zsh, from:github, as:theme
+
 # 入力途中に候補をうっすら表示
 zplug "zsh-users/zsh-autosuggestions"
 # コマンドを種類ごとに色付け
