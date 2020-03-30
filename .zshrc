@@ -92,6 +92,8 @@ eval "$(rbenv init - zsh)"
 # flutter
 export PATH="$HOME/dev/flutter/bin:$PATH"
 
+# Android SDK
+export PATH=$PATH:/$HOME/Library/Android/sdk/platform-tools
 
 # starship
 eval "$(starship init zsh)"
