@@ -23,9 +23,9 @@ PROMPT='%m:%F{green}%c%f %n%# '
 # 履歴ファイルの保存先
 export HISTFILE=${HOME}/.zhistory
 # メモリに保存される履歴の件数
-export HISTSIZE=1000
+export HISTSIZE=2000
 # 履歴ファイルに保存される履歴の件数
-export SAVEHIST=100000
+export SAVEHIST=530000
 # 重複を記録しない
 setopt hist_ignore_dups
 # 開始と終了を記録
