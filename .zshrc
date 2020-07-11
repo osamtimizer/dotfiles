@@ -122,3 +122,7 @@ zle -N peco-history-selection
 bindkey '^R' peco-history-selection
 bindkey '^g' peco-src
 
+# kubectl
+source <(kubectl completion zsh)
+alias k=kubectl
+complete -o default -F __start_kubectl k
