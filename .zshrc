@@ -126,3 +126,7 @@ bindkey '^g' peco-src
 source <(kubectl completion zsh)
 alias k=kubectl
 complete -o default -F __start_kubectl k
+
+# gcloud
+export PATH="$HOME/dev/google-cloud-sdk/bin:$PATH"
+
