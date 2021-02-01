@@ -51,6 +51,7 @@ setopt inc_append_history
 
 # alias
 alias g='git'
+alias gp='gti push'
 alias gmbd='git branch --merged master | grep -vE "^\*|master$" | xargs -I % git branch -d %'
 alias hl='temp=$(cat ~/.bash_history | peco); { echo "$temp" | pbcopy ; }'
 alias dc='docker-compose'
@@ -90,7 +91,7 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init - zsh)"
 
 # flutter
-export PATH="$HOME/dev/flutter/bin:$PATH"
+export PATH="$HOME/ghq/github.com/flutter/flutter/bin:$PATH"
 
 # Android SDK
 export PATH=$PATH:/$HOME/Library/Android/sdk/platform-tools
@@ -130,3 +131,18 @@ complete -o default -F __start_kubectl k
 # gcloud
 export PATH="$HOME/dev/google-cloud-sdk/bin:$PATH"
 
+# direnv
+export EDITOR=vim
+eval "$(direnv hook zsh)"
+
+# anyenv
+eval "$(anyenv init -)"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '~/google-cloud-sdk/path.zsh.inc' ]; then . '~/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '~/google-cloud-sdk/completion.zsh.inc' ]; then . '~/google-cloud-sdk/completion.zsh.inc'; fi
+
+# binutils
+export PATH="/usr/local/opt/binutils/bin:$PATH"
