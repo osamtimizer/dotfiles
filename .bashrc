@@ -87,3 +87,4 @@ source $HOME/.bashrc.secret
 # openssl settings
 export LDFLAGS="-L/usr/local/opt/openssl/lib"
 export CPPFLAGS="-I/usr/local/opt/openssl/include"
+source "$HOME/.cargo/env"

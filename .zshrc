@@ -135,11 +135,23 @@ eval "$(direnv hook zsh)"
 # anyenv
 eval "$(anyenv init -)"
 
+# binutils
+export PATH="/usr/local/opt/binutils/bin:$PATH"
+
+export PATH=$PATH:$GOPATH/bin
+export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$PATH":"$HOME/.pub-cache/bin"
+export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
+
+# ruby
+export PATH="/usr/local/bin:$PATH"
+export PATH="$HOME/.rbenv/bin:$HOME/.rbenv/shims:$PATH"
+
+# gcloud
+export PATH="$HOME/dev/google-cloud-sdk/bin:$PATH"
+
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '~/google-cloud-sdk/path.zsh.inc' ]; then . '~/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
 if [ -f '~/google-cloud-sdk/completion.zsh.inc' ]; then . '~/google-cloud-sdk/completion.zsh.inc'; fi
-
-# binutils
-export PATH="/usr/local/opt/binutils/bin:$PATH"
