@@ -155,3 +155,8 @@ if [ -f '~/google-cloud-sdk/path.zsh.inc' ]; then . '~/google-cloud-sdk/path.zsh
 
 # The next line enables shell command completion for gcloud.
 if [ -f '~/google-cloud-sdk/completion.zsh.inc' ]; then . '~/google-cloud-sdk/completion.zsh.inc'; fi
+
+# https://github.com/superbrothers/zsh-kubectl-prompt
+autoload -U colors; colors
+source $HOME/ghq/github.com/superbrothers/zsh-kubectl-prompt/kubectl.zsh
+RPROMPT='%{$fg[$PCOLOR]%}($ZSH_KUBECTL_PROMPT)%{$reset_color%}'
