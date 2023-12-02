@@ -160,3 +160,6 @@ if [ -f '~/google-cloud-sdk/completion.zsh.inc' ]; then . '~/google-cloud-sdk/co
 autoload -U colors; colors
 source $HOME/ghq/github.com/superbrothers/zsh-kubectl-prompt/kubectl.zsh
 RPROMPT='%{$fg[$PCOLOR]%}($ZSH_KUBECTL_PROMPT)%{$reset_color%}'
+
+# yarn
+export PATH=$PATH:~/.yarn/bin
