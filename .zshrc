@@ -163,3 +163,6 @@ RPROMPT='%{$fg[$PCOLOR]%}($ZSH_KUBECTL_PROMPT)%{$reset_color%}'
 
 # yarn
 export PATH=$PATH:~/.yarn/bin
+
+export LIBRARY_PATH=$LIBRARY_PATH:/opt/homebrew/opt/libjpeg/lib:/opt/homebrew/opt/libpng/lib:/opt/homebrew/opt/sqlite/lib
+export CPLUS_INCLUDE_PATH=/opt/homebrew/include
