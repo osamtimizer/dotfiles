@@ -165,14 +165,12 @@ export PATH="$PATH:`yarn global bin`"
 
 export LIBRARY_PATH=$LIBRARY_PATH:/opt/homebrew/opt/libjpeg/lib:/opt/homebrew/opt/libpng/lib:/opt/homebrew/opt/sqlite/lib
 export CPLUS_INCLUDE_PATH=/opt/homebrew/include
+# asdf
 . /opt/homebrew/opt/asdf/libexec/asdf.sh
+
+# versioning
 eval "$(nodenv init -)"
 eval "$(pyenv init -)"
 
 # GPG Settings
 export GPG_TTY=$(tty)
-# homebrew
-export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
-export PATH=/opt/homebrew/lib/ruby/gems/3.3.0/bin:$PATH
-
-# asdf
