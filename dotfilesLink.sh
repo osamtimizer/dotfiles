@@ -5,3 +5,4 @@ ln -sf $HOME/dotfiles/.bashrc $HOME/.bashrc
 ln -sf $HOME/dotfiles/.xvimrc $HOME/.xvimrc
 ln -sf $HOME/dotfiles/.zshrc $HOME/.zshrc
 ln -sf $HOME/dotfiles/.zshenv $HOME/.zshenv
+ln -sf $HOME/dotfiles/.tmux.conf $HOME/.tmux.conf
