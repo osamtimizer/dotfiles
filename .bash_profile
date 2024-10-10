@@ -3,4 +3,4 @@ if [ -f ~/.bashrc ] ; then
 fi 
 
 
-source "$HOME/.cargo/env"
+. "$HOME/.cargo/env"

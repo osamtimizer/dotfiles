@@ -53,6 +53,7 @@ setopt inc_append_history
 alias g='git'
 alias gp='gti push'
 alias gmbd='git branch --merged master | grep -vE "^\*|master$" | xargs -I % git branch -d %'
+alias gmbdm='git branch --merged main | grep -vE "^\*|main$" | xargs -I % git branch -d %'
 alias hl='temp=$(cat ~/.bash_history | peco); { echo "$temp" | pbcopy ; }'
 alias dc='docker-compose'
 alias dcr='docker-compose run --rm'
@@ -163,6 +164,13 @@ RPROMPT='%{$fg[$PCOLOR]%}($ZSH_KUBECTL_PROMPT)%{$reset_color%}'
 
 # yarn
 export PATH=$PATH:~/.yarn/bin
+export PATH="$PATH:`yarn global bin`"
 
 export LIBRARY_PATH=$LIBRARY_PATH:/opt/homebrew/opt/libjpeg/lib:/opt/homebrew/opt/libpng/lib:/opt/homebrew/opt/sqlite/lib
 export CPLUS_INCLUDE_PATH=/opt/homebrew/include
+eval "$(nodenv init -)"
+eval "$(pyenv init -)"
+
+# GPG Settings
+export GPG_TTY=$(tty)
+
