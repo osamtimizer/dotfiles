@@ -54,6 +54,7 @@ alias g='git'
 alias gp='gti push'
 alias gmbd='git branch --merged master | grep -vE "^\*|master$" | xargs -I % git branch -d %'
 alias gmbdm='git branch --merged main | grep -vE "^\*|main$" | xargs -I % git branch -d %'
+alias gmbds='git branch --merged staging | grep -vE "^\*|staging$" | xargs -I % git branch -d %'
 alias hl='temp=$(cat ~/.bash_history | peco); { echo "$temp" | pbcopy ; }'
 alias dc='docker-compose'
 alias dcr='docker-compose run --rm'
@@ -144,10 +145,6 @@ export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$PATH":"$HOME/.pub-cache/bin"
 export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
 
-# ruby
-export PATH="/usr/local/bin:$PATH"
-export PATH="$HOME/.rbenv/bin:$HOME/.rbenv/shims:$PATH"
-
 # gcloud
 export PATH="$HOME/dev/google-cloud-sdk/bin:$PATH"
 
@@ -168,9 +165,14 @@ export PATH="$PATH:`yarn global bin`"
 
 export LIBRARY_PATH=$LIBRARY_PATH:/opt/homebrew/opt/libjpeg/lib:/opt/homebrew/opt/libpng/lib:/opt/homebrew/opt/sqlite/lib
 export CPLUS_INCLUDE_PATH=/opt/homebrew/include
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
 eval "$(nodenv init -)"
 eval "$(pyenv init -)"
 
 # GPG Settings
 export GPG_TTY=$(tty)
+# homebrew
+export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+export PATH=/opt/homebrew/lib/ruby/gems/3.3.0/bin:$PATH
 
+# asdf
