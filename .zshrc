@@ -134,9 +134,6 @@ complete -o default -F __start_kubectl k
 export EDITOR=vim
 eval "$(direnv hook zsh)"
 
-# anyenv
-eval "$(anyenv init -)"
-
 # binutils
 export PATH="/usr/local/opt/binutils/bin:$PATH"
 
